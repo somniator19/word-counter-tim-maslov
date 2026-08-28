@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧮Word Counter🧮</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Word Counter</h1>
+
+        <textarea
+            id="text-input"
+            placeholder="Please, type or paste your text here..."
+            rows="10"
+        ></textarea>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Letters</span>
+                <span id="letter-count" class="stat-number">0</span>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">Words</span>
+                <span id="word-count" class="stat-number">0</span>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">Sentences</span>
+                <span id="sentence-count" class="stat-number">0</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
