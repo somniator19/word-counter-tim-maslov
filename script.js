@@ -20,3 +20,15 @@ function updateCounts() {
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   sentenceCount.textContent = sentences.length;
 }
+
+// Update counts while typing (with a tiny delay = asynchronous)
+let timer;
+textInput.addEventListener("input", function () {
+  clearTimeout(timer);
+  timer = setTimeout(updateCounts, 150); // waits 150ms after you stop typing
+});
+
+// Run once at the start
+updateCounts();
+
+//And that's all folks! \('o')/
