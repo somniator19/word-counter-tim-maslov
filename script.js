@@ -40,16 +40,23 @@ textInput.addEventListener("input", () => {
   timer = setTimeout(updateCounts, 150); // waits 150ms after you stop typing
     });
 
-// Random soft background colors
-const colors = [
-  "#fce4ec", "#e8f5e9", "#e3f2fd", "#fff3e0",
-  "#f3e5f5", "#e0f7fa", "#fbe9e7", "#f1f8e9",
-  "#ede7f6", "#e0f2f1"
+// Soft warm gradients (inspired by uigradients)
+const gradients = [
+  "linear-gradient(135deg, #ee9ca7, #ffdde1)",   // soft pink
+  "linear-gradient(135deg, #ffecd2, #fcb69f)",   // peach
+  "linear-gradient(135deg, #a18cd1, #fbc2eb)",   // lavender-pink
+  "linear-gradient(135deg, #f6d365, #fda085)",   // warm sunset
+  "linear-gradient(135deg, #ff9a9e, #fecfef)",   // rose
+  "linear-gradient(135deg, #fbc2eb, #a6c1ee)",   // candy
+  "linear-gradient(120deg, #fad0c4, #ffd1ff)",   // soft blush
+  "linear-gradient(135deg, #ffc3a0, #ffafbd)",   // coral cream
+  "linear-gradient(to right, #e0c3fc, #8ec5fc)", // soft purple-blue
+  "linear-gradient(135deg, #fdfbfb, #ebedee)"    // almost white calm
 ];
 
 bgButton.addEventListener("click", () => {
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  document.body.style.backgroundColor = randomColor;
+  const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+  document.body.style.background = randomGradient;
 });
 
 // Run once at the start
