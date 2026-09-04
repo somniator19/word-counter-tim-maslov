@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fce4ec;          /* soft pink background */
+  background: linear-gradient(135deg, #ee9ca7, #ffdde1);
   font-family: "Courier New", Courier, monospace;  /* pixel-ish feel */
   color: #333;
 }
