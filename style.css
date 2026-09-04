@@ -84,3 +84,39 @@ h1 {
   font-weight: bold;
   color: #e91e63;
 }
+
+/* Cutifying the stats, so they wrap nicely within 5 boxes */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.stat-box {
+  flex: 1 1 110px;   /* allows wrapping */
+  min-width: 100px;
+}
+
+/* Round floating button */
+#bg-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  background-color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #333;
+  transition: transform 0.15s, background-color 0.2s;
+  z-index: 100;
+}
+
+#bg-button:hover {
+  transform: scale(1.1);
+  background-color: #fce4ec;
+}
