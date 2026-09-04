@@ -9,31 +9,44 @@
 <body>
 
     <main class="container">
-        <h1>Word Counter</h1>
+  <h1>Word Counter</h1>
 
-        <textarea
-            id="text-input"
-            placeholder="Please, type or paste your text here..."
-            rows="10"
-        ></textarea>
+  <textarea
+    id="text-input"
+    placeholder="Please, type or paste your text here..."
+    rows="10"
+  ></textarea>
 
-        <div class="stats">
-            <div class="stat-box">
-                <span class="stat-label">Letters</span>
-                <span id="letter-count" class="stat-number">0</span>
-            </div>
+  <div class="stats">
+    <div class="stat-box">
+      <span class="stat-label">Letters</span>
+      <span id="letter-count" class="stat-number">0</span>
+    </div>
 
-            <div class="stat-box">
-                <span class="stat-label">Words</span>
-                <span id="word-count" class="stat-number">0</span>
-            </div>
+    <div class="stat-box">
+      <span class="stat-label">Numbers</span>
+      <span id="number-count" class="stat-number">0</span>
+    </div>
 
-            <div class="stat-box">
-                <span class="stat-label">Sentences</span>
-                <span id="sentence-count" class="stat-number">0</span>
-            </div>
-        </div>
-    </main>
+    <div class="stat-box">
+      <span class="stat-label">Symbols</span>
+      <span id="symbol-count" class="stat-number">0</span>
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-label">Words</span>
+      <span id="word-count" class="stat-number">0</span>
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-label">Sentences</span>
+      <span id="sentence-count" class="stat-number">0</span>
+    </div>
+  </div>
+</main>
+
+<!-- Small round button in the corner -->
+<button id="bg-button" title="Change background">🌸</button>
 
     <script src="script.js"></script>
 </body>
