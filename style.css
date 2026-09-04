@@ -1,0 +1,122 @@
+/* ===== Basic reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ee9ca7, #ffdde1);
+  font-family: "Courier New", Courier, monospace;  /* pixel-ish feel */
+  color: #333;
+}
+
+/* ===== Main container ===== */
+.container {
+  background-color: #fff;
+  border: 4px solid #333;             /* thick border = pixel look */
+  border-radius: 8px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 8px 8px 0 #333;         /* hard shadow = retro feel */
+}
+
+/* ===== Title ===== */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #e91e63;                     /* cute pink */
+}
+
+/* ===== Textarea ===== */
+#text-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 3px solid #333;
+  border-radius: 6px;
+  resize: vertical;
+  background-color: #fff8f0;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#text-input:focus {
+  border-color: #e91e63;
+}
+
+/* ===== Stats section ===== */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.stat-box {
+  flex: 1;
+  background-color: #fce4ec;
+  border: 3px solid #333;
+  border-radius: 6px;
+  padding: 15px 10px;
+  text-align: center;
+  box-shadow: 4px 4px 0 #333;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+/* Cutifying the stats, so they wrap nicely within 5 boxes */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.stat-box {
+  flex: 1 1 110px;   /* allows wrapping */
+  min-width: 100px;
+}
+
+/* Round floating button */
+#bg-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  background-color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #333;
+  transition: transform 0.15s, background-color 0.2s;
+  z-index: 100;
+}
+
+#bg-button:hover {
+  transform: scale(1.1);
+  background-color: #fce4ec;
+}
