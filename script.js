@@ -8,9 +8,15 @@ const sentenceCount = document.getElementById("sentence-count");
 function updateCounts() {
   const text = textInput.value;
 
-  // Letters (ignore spaces and new lines)
-  const letters = text.replace(/\s/g, "").length;
+  // Only letters (a-z, A-Z)
+  const letters = (text.match(/[a-zA-Z]/g) || []).length;
   letterCount.textContent = letters;
+
+  // Numbers (0-9)
+  const numbers = (text.match(/[0-9]/g) || []).length;
+
+  // Symbols (everything that is not letter, number or whitespace)
+  const symbols = (text.match(/[^a-zA-Z0-9\s]/g) || []).length;
 
   // Words
   const wordsArray = text.trim().split(/\s+/).filter(word => word.length > 0);
@@ -19,6 +25,7 @@ function updateCounts() {
   // Sentences (count . ! ?)
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   sentenceCount.textContent = sentences.length;
+
 }
 
 // Update counts while typing (with a tiny delay = asynchronous)
